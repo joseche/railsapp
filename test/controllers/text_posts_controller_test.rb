@@ -13,6 +13,21 @@ class TextPostsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should create post" do
+    user = users(:user1)
+    params = {
+        text_post: {
+            title: "Test Title",
+            body: "Body for test"
+        }
+    }
+    post :create, params, { user_id: user.id }
+    text_post = assigns(:text_post)
+
+    assert text_post.persisted?
+    assert_redirected_to post_url(text_post)
+
+  end
 
 
 
