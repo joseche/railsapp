@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#post1:
+#  title: Title One
+#  body: Body one
+#  type: TextPost
+#  user: user1
+
+post2:
+  title: Title two
+  body: Body two
+  type: ImagePost
+  url: http://i.imgur.com/Y7syDEa.jpg
+  user: user1
+
+post3:
+  title: Title three
+  body: Body three
+  type: TextPost
+  user: user2
