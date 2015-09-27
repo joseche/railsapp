@@ -8,9 +8,17 @@
   <div class="panel-body">
     <p><em>By <%= link_to image_post.user.name, user_path(image_post.user) %></em></p>
 
+    <p>
     <%= image_tag image_post.url, class: "img-responsive" %>
-
     <%= image_post.body %>
+    </p>
+
+    <% if image_post.user == current_user %>
+      <p>
+        <%= link_to 'Edit', edit_image_post_path(image_post), class: "btn btn-default" %>
+      </p>
+    <% end %>
+
   </div>
 </div>
 
